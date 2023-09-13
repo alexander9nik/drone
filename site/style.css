@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/dji-mini-3-pro.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}   
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: greenyellow;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 900;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.6s;
+}
+.nav-links ul li:hover::after{
+    width: 50px;
+}
+.text-box{
+    width: 90%;
+    color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+   
+    
+}
+.text-box h1{
+    font-size: 90px;
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: aquamarine;
+}
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: greenyellow;
+    border: 1px solid orange;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-weight: 900;
+}
+.hero-btn:hover{
+    border: 1pxx solid orange;
+    background: orange;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width:700px){
+    .text-box h1{
+         font-size: 20px;
+    }
+    .nav-links ul li{  
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: darkgreen;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    nav .fa{
+        display:block;
+        color: #f44336;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}    
+
+/*-------- course --------*/
+.course{
+width: 80;
+margin:auto;
+text-align: center;
+padding-top: 100px;
+color: darkolivegreen;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: darkgreen;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: content-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight:600 ;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*------- campus ---------*/
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+.layer1 {
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: 0.5s;
+}
+.layer1:hover{
+    background: rgba(206, 13, 13, 0.658);
+}
+.layer1 h3{
+    width: 100%;
+    font-weight: 900;
+    color: #fff3f3;
+    font-size: 30px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0 ;
+    transition: 0.5s;
+}
+.layer2 {
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: 0.5s;
+}
+.layer2:hover{
+    background: rgba(11, 207, 43, 0.658);
+}
+.layer2 h3{
+    width: 100%;
+    font-weight: 900;
+    color: #fff3f3;
+    font-size: 30px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer3 {
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: 0.5s;
+}
+.layer3:hover{
+    background: rgba(10, 41, 216, 0.658);
+}
+.layer3 h3{
+    width: 100%;
+    font-weight: 900;
+    color: #fff3f3;
+    font-size: 30px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer1:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+.layer2:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+.layer3:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+@media(max-width:700px){
+    .layer1 {
+        background:transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transition: 0.5s;
+    }
+}
+@media(max-width:700px){
+    .layer2 {
+        background:transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transition: 0.5s;
+    }
+} 
+
+/*--------- facilities ---------*/
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 50px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    display:block;
+    width:auto;
+    height:fit-content;
+    max-width:98%;
+    max-height:95%;
+      
+}
+
+.facilities-col p{
+    padding: 5px;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/*----- call to action -------*/
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/drone-signal-header-1024x576.webp);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: aqua;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width:700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/*--------footer------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 900;
+}
+.icons {
+    color: aquamarine;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18 0;
+    font-size: larger;
+    font-weight: 1000;
+}
+
+
